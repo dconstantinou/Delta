@@ -11,11 +11,11 @@ import Moya
 
 struct IGDBClient {
     
-    func retrieveGames(search query: String) -> Single<[Game]> {
-        return provider.rx.request(.games(query: query)).map([Game].self)
+    func retrieveGames(search query: String) -> Single<[IGDBGame]> {
+        return provider.rx.request(.games(query: query)).map([IGDBGame].self)
     }
     
-    func retrieveCover(game: Game, size: IGDBTarget.ImageSize) -> Single<UIImage?> {
+    func retrieveCover(game: IGDBGame, size: IGDBTarget.ImageSize) -> Single<UIImage?> {
         guard let cover = game.cover else {
             return .just(nil)
         }
