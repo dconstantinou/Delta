@@ -15,7 +15,10 @@
 		C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E172007D1840005EC79 /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; };
 		C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C9855E2D2007D3460005EC79 /* IGDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E2C2007D3460005EC79 /* IGDBClient.swift */; };
+		C9855E2D2007D3460005EC79 /* IGDBTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E2C2007D3460005EC79 /* IGDBTarget.swift */; };
+		C9855E362007D7C10005EC79 /* IGDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E352007D7C10005EC79 /* IGDBClient.swift */; };
+		C9855E382007D83C0005EC79 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E372007D83C0005EC79 /* Game.swift */; };
+		C9855E3A2007D8B10005EC79 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E392007D8B10005EC79 /* Image.swift */; };
 		E5918415B879B1BE7FCBAD7F /* Pods_Delta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +86,10 @@
 		C9855E082007CF240005EC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9855E112007D1840005EC79 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = External/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBADeltaCore.xcodeproj; path = External/GBADeltaCore/GBADeltaCore.xcodeproj; sourceTree = "<group>"; };
-		C9855E2C2007D3460005EC79 /* IGDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBClient.swift; sourceTree = "<group>"; };
+		C9855E2C2007D3460005EC79 /* IGDBTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBTarget.swift; sourceTree = "<group>"; };
+		C9855E352007D7C10005EC79 /* IGDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBClient.swift; sourceTree = "<group>"; };
+		C9855E372007D83C0005EC79 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C9855E392007D8B10005EC79 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +114,24 @@
 				29789E57FAA7D69FBE0AA936 /* Pods-Delta.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C94160C82007DD2B008E30C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9855E372007D83C0005EC79 /* Game.swift */,
+				C9855E392007D8B10005EC79 /* Image.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C94160C92007DD36008E30C1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C9855E2C2007D3460005EC79 /* IGDBTarget.swift */,
+				C9855E352007D7C10005EC79 /* IGDBClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		C9855DF02007CF240005EC79 = {
@@ -135,7 +159,8 @@
 			children = (
 				C9855DFC2007CF240005EC79 /* AppDelegate.swift */,
 				C9855DFE2007CF240005EC79 /* ViewController.swift */,
-				C9855E2C2007D3460005EC79 /* IGDBClient.swift */,
+				C94160C92007DD36008E30C1 /* Network */,
+				C94160C82007DD2B008E30C1 /* Models */,
 				C9855E032007CF240005EC79 /* Assets.xcassets */,
 				C9855E052007CF240005EC79 /* LaunchScreen.storyboard */,
 				C9855E082007CF240005EC79 /* Info.plist */,
@@ -341,9 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9855E382007D83C0005EC79 /* Game.swift in Sources */,
+				C9855E3A2007D8B10005EC79 /* Image.swift in Sources */,
+				C9855E362007D7C10005EC79 /* IGDBClient.swift in Sources */,
 				C9855DFF2007CF240005EC79 /* ViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
-				C9855E2D2007D3460005EC79 /* IGDBClient.swift in Sources */,
+				C9855E2D2007D3460005EC79 /* IGDBTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +517,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZNZ7JR46X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Moya\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Result\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/RxCocoa\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/RxSwift\"",
+				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Delta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dinoconstantinou.Delta;
@@ -506,6 +543,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ZNZ7JR46X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Alamofire\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Moya\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Result\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/RxCocoa\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/RxSwift\"",
+				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Delta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dinoconstantinou.Delta;

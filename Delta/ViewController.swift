@@ -7,20 +7,26 @@
 //
 
 import UIKit
-import GBADeltaCore
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        client.retrieveGames(search: "Pokemon - Fire Red Version").subscribe(onSuccess: { (games) in
+            guard let game = games.first else {
+                return
+            }
+            
+            self.client.retrieveCover(game: game, size: .huge).subscribe(onSuccess: { image in
+                
+            })
+        }).disposed(by: bag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    var client = IGDBClient()
+    private let bag = DisposeBag()
 
 }
-
