@@ -1,0 +1,8 @@
+[submodule "External/DeltaCore"]
+	path = External/DeltaCore
+	url = git@github.com:rileytestut/DeltaCore.git
+	branch = master
+[submodule "External/GBADeltaCore"]
+	path = External/GBADeltaCore
+	url = git@github.com:rileytestut/GBADeltaCore.git
+	branch = master

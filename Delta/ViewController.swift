@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GBADeltaCore
 
 class ViewController: UIViewController {
 
