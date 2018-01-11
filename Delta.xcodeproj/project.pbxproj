@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFC2007CF240005EC79 /* AppDelegate.swift */; };
 		C9855DFF2007CF240005EC79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFE2007CF240005EC79 /* ViewController.swift */; };
-		C9855E022007CF240005EC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9855E002007CF240005EC79 /* Main.storyboard */; };
 		C9855E042007CF240005EC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9855E032007CF240005EC79 /* Assets.xcassets */; };
 		C9855E072007CF240005EC79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9855E052007CF240005EC79 /* LaunchScreen.storyboard */; };
 		C9855E182007D1A70005EC79 /* DeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E172007D1840005EC79 /* DeltaCore.framework */; };
 		C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E172007D1840005EC79 /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; };
 		C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9855E2D2007D3460005EC79 /* IGDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E2C2007D3460005EC79 /* IGDBClient.swift */; };
+		E5918415B879B1BE7FCBAD7F /* Pods_Delta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,15 +73,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		29789E57FAA7D69FBE0AA936 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
+		6C3110E27BD7F7F8C505C99D /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
 		C9855DF92007CF240005EC79 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9855DFC2007CF240005EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9855DFE2007CF240005EC79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9855E012007CF240005EC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9855E032007CF240005EC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9855E062007CF240005EC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9855E082007CF240005EC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9855E112007D1840005EC79 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = External/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBADeltaCore.xcodeproj; path = External/GBADeltaCore/GBADeltaCore.xcodeproj; sourceTree = "<group>"; };
+		C9855E2C2007D3460005EC79 /* IGDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBClient.swift; sourceTree = "<group>"; };
+		F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,17 +94,29 @@
 			files = (
 				C9855E182007D1A70005EC79 /* DeltaCore.framework in Frameworks */,
 				C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */,
+				E5918415B879B1BE7FCBAD7F /* Pods_Delta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FA68F351C22074F1C28DD29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C3110E27BD7F7F8C505C99D /* Pods-Delta.debug.xcconfig */,
+				29789E57FAA7D69FBE0AA936 /* Pods-Delta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C9855DF02007CF240005EC79 = {
 			isa = PBXGroup;
 			children = (
 				C9855DFB2007CF240005EC79 /* Delta */,
 				C9855DFA2007CF240005EC79 /* Products */,
+				2FA68F351C22074F1C28DD29 /* Pods */,
+				EB9F0E811FBA81A1135EADBE /* Frameworks */,
 				C9855E112007D1840005EC79 /* DeltaCore.xcodeproj */,
 				C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */,
 			);
@@ -119,7 +135,7 @@
 			children = (
 				C9855DFC2007CF240005EC79 /* AppDelegate.swift */,
 				C9855DFE2007CF240005EC79 /* ViewController.swift */,
-				C9855E002007CF240005EC79 /* Main.storyboard */,
+				C9855E2C2007D3460005EC79 /* IGDBClient.swift */,
 				C9855E032007CF240005EC79 /* Assets.xcassets */,
 				C9855E052007CF240005EC79 /* LaunchScreen.storyboard */,
 				C9855E082007CF240005EC79 /* Info.plist */,
@@ -144,6 +160,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EB9F0E811FBA81A1135EADBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,10 +175,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9855E0B2007CF240005EC79 /* Build configuration list for PBXNativeTarget "Delta" */;
 			buildPhases = (
+				40405949947643D0BC12815B /* [CP] Check Pods Manifest.lock */,
 				C9855DF52007CF240005EC79 /* Sources */,
 				C9855DF62007CF240005EC79 /* Frameworks */,
 				C9855DF72007CF240005EC79 /* Resources */,
 				C9855E1C2007D1A80005EC79 /* Embed Frameworks */,
+				EBA7335A16BE92B5183C02CD /* [CP] Embed Pods Frameworks */,
+				472147CDC551BBE432610192 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,11 +269,72 @@
 			files = (
 				C9855E072007CF240005EC79 /* LaunchScreen.storyboard in Resources */,
 				C9855E042007CF240005EC79 /* Assets.xcassets in Resources */,
-				C9855E022007CF240005EC79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40405949947643D0BC12815B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		472147CDC551BBE432610192 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA7335A16BE92B5183C02CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9855DF52007CF240005EC79 /* Sources */ = {
@@ -255,6 +343,7 @@
 			files = (
 				C9855DFF2007CF240005EC79 /* ViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
+				C9855E2D2007D3460005EC79 /* IGDBClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,14 +363,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C9855E002007CF240005EC79 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9855E012007CF240005EC79 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C9855E052007CF240005EC79 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -402,6 +483,7 @@
 		};
 		C9855E0C2007CF240005EC79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3110E27BD7F7F8C505C99D /* Pods-Delta.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -418,6 +500,7 @@
 		};
 		C9855E0D2007CF240005EC79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29789E57FAA7D69FBE0AA936 /* Pods-Delta.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
