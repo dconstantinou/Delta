@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905CE4420093A4A008F9798 /* OpenVGDB.swift */; };
+		C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C957492C200937D000E2328A /* openvgdb.sqlite */; };
 		C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CC2007EA5B008E30C1 /* GameCell.swift */; };
 		C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CE2007F4A1008E30C1 /* UIView.swift */; };
 		C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */; };
@@ -18,10 +20,6 @@
 		C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E172007D1840005EC79 /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; };
 		C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C9855E2D2007D3460005EC79 /* IGDBTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E2C2007D3460005EC79 /* IGDBTarget.swift */; };
-		C9855E362007D7C10005EC79 /* IGDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E352007D7C10005EC79 /* IGDBClient.swift */; };
-		C9855E382007D83C0005EC79 /* IGDBGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E372007D83C0005EC79 /* IGDBGame.swift */; };
-		C9855E3A2007D8B10005EC79 /* IGDBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855E392007D8B10005EC79 /* IGDBImage.swift */; };
 		E5918415B879B1BE7FCBAD7F /* Pods_Delta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,9 +79,12 @@
 /* Begin PBXFileReference section */
 		29789E57FAA7D69FBE0AA936 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
 		6C3110E27BD7F7F8C505C99D /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
+		C905CE4420093A4A008F9798 /* OpenVGDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVGDB.swift; sourceTree = "<group>"; };
 		C94160CC2007EA5B008E30C1 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		C94160CE2007F4A1008E30C1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C94160D32007F9E4008E30C1 /* Delta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delta.xcdatamodel; sourceTree = "<group>"; };
+		C957492C200937D000E2328A /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
+		C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Fire Red Version (U) (V1.1).gba"; sourceTree = "<group>"; };
 		C9855DF92007CF240005EC79 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9855DFC2007CF240005EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
@@ -92,11 +93,6 @@
 		C9855E082007CF240005EC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9855E112007D1840005EC79 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = External/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBADeltaCore.xcodeproj; path = External/GBADeltaCore/GBADeltaCore.xcodeproj; sourceTree = "<group>"; };
-		C9855E2C2007D3460005EC79 /* IGDBTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBTarget.swift; sourceTree = "<group>"; };
-		C9855E352007D7C10005EC79 /* IGDBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBClient.swift; sourceTree = "<group>"; };
-		C9855E372007D83C0005EC79 /* IGDBGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBGame.swift; sourceTree = "<group>"; };
-		C9855E392007D8B10005EC79 /* IGDBImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBImage.swift; sourceTree = "<group>"; };
-		C9EC69DE2008212100193A4B /* Pokemon - Fire Red Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Fire Red Version (U) (V1.1).gba"; sourceTree = "<group>"; };
 		F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,22 +119,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C94160C82007DD2B008E30C1 /* Models */ = {
+		C905CE402009399B008F9798 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C9855E372007D83C0005EC79 /* IGDBGame.swift */,
-				C9855E392007D8B10005EC79 /* IGDBImage.swift */,
+				C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C94160C92007DD36008E30C1 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				C9855E2C2007D3460005EC79 /* IGDBTarget.swift */,
-				C9855E352007D7C10005EC79 /* IGDBClient.swift */,
-			);
-			path = Network;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C94160D02007F5A3008E30C1 /* Extensions */ = {
@@ -149,12 +135,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C94160D12007F5D9008E30C1 /* Cells */ = {
+		C94160D12007F5D9008E30C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C94160CC2007EA5B008E30C1 /* GameCell.swift */,
 			);
-			path = Cells;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C957492D200937D300E2328A /* OpenVGDB */ = {
+			isa = PBXGroup;
+			children = (
+				C905CE4420093A4A008F9798 /* OpenVGDB.swift */,
+				C957492C200937D000E2328A /* openvgdb.sqlite */,
+			);
+			path = OpenVGDB;
+			sourceTree = "<group>";
+		};
+		C957492F2009382700E2328A /* ROMS */ = {
+			isa = PBXGroup;
+			children = (
+				C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */,
+			);
+			path = ROMS;
 			sourceTree = "<group>";
 		};
 		C9855DF02007CF240005EC79 = {
@@ -181,12 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				C9855DFC2007CF240005EC79 /* AppDelegate.swift */,
-				C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */,
-				C94160D12007F5D9008E30C1 /* Cells */,
-				C94160C92007DD36008E30C1 /* Network */,
-				C94160C82007DD2B008E30C1 /* Models */,
+				C94160D12007F5D9008E30C1 /* Views */,
+				C905CE402009399B008F9798 /* Controllers */,
 				C94160D02007F5A3008E30C1 /* Extensions */,
-				C9EC69DE2008212100193A4B /* Pokemon - Fire Red Version (U) (V1.1).gba */,
+				C957492D200937D300E2328A /* OpenVGDB */,
+				C957492F2009382700E2328A /* ROMS */,
 				C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */,
 				C9855E032007CF240005EC79 /* Assets.xcassets */,
 				C9855E052007CF240005EC79 /* LaunchScreen.storyboard */,
@@ -321,6 +323,7 @@
 			files = (
 				C9855E072007CF240005EC79 /* LaunchScreen.storyboard in Resources */,
 				C9855E042007CF240005EC79 /* Assets.xcassets in Resources */,
+				C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,25 +372,25 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -401,14 +404,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */,
 				C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */,
-				C9855E382007D83C0005EC79 /* IGDBGame.swift in Sources */,
-				C9855E3A2007D8B10005EC79 /* IGDBImage.swift in Sources */,
-				C9855E362007D7C10005EC79 /* IGDBClient.swift in Sources */,
 				C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */,
 				C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
-				C9855E2D2007D3460005EC79 /* IGDBTarget.swift in Sources */,
 				C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

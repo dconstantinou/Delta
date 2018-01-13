@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
-        <attribute name="cover" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Artwork" representedClassName="Artwork" syncable="YES" codeGenerationType="class">
         <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="artwork" inverseEntity="Game" syncable="YES"/>
+    </entity>
+    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="artwork" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artwork" inverseName="game" inverseEntity="Artwork" syncable="YES"/>
+        <relationship name="rom" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ROM" inverseName="game" inverseEntity="ROM" syncable="YES"/>
+        <relationship name="system" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="System" inverseName="games" inverseEntity="System" syncable="YES"/>
+    </entity>
+    <entity name="ROM" representedClassName="ROM" syncable="YES" codeGenerationType="class">
+        <attribute name="md5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="rom" inverseEntity="Game" syncable="YES"/>
+    </entity>
+    <entity name="SaveState" representedClassName="SaveState" syncable="YES" codeGenerationType="class"/>
+    <entity name="System" representedClassName="System" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="system" inverseEntity="Game" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Artwork" positionX="-54" positionY="0" width="128" height="90"/>
+        <element name="Game" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="ROM" positionX="-63" positionY="-9" width="128" height="90"/>
+        <element name="SaveState" positionX="-18" positionY="27" width="128" height="45"/>
+        <element name="System" positionX="-36" positionY="9" width="128" height="75"/>
     </elements>
 </model>
