@@ -16,7 +16,7 @@ struct OpenVGDB {
         let name: String
         let summary: String
         let region: String
-        let artwork: String
+        let artwork: String?
         let rom: ROM
         let system: System
     }
@@ -52,7 +52,7 @@ struct OpenVGDB {
 
         let releaseTitle = Expression<String>("releaseTitleName")
         let releaseDescription = Expression<String>("releaseDescription")
-        let releaseCoverFront = Expression<String>("releaseCoverFront")
+        let releaseCoverFront = Expression<String?>("releaseCoverFront")
 
         let regionID = Expression<Int64>("regionID")
         let region = Expression<String>("regionName")
@@ -67,13 +67,14 @@ struct OpenVGDB {
         let systemShortName = Expression<String>("systemShortName")
 
         let query = releases
-            .select(releaseTitle, releaseDescription, releaseCoverFront, region, romFileName, romHashMD5, systemOEID, systemName, systemShortName)
+            .select(distinct: releaseTitle, releaseDescription, releaseCoverFront, region, romFileName, romHashMD5, systemOEID, systemName, systemShortName)
             .filter(romHashMD5 == md5)
             .join(roms, on: releases.namespace(romID) == roms.namespace(romID))
             .join(regions, on: roms.namespace(regionID) == regions.namespace(regionID))
             .join(systems, on: roms.namespace(systemID) == systems.namespace(systemID))
 
-        guard let row = try connection.pluck(query) else {
+        let results = try connection.prepare(query)
+        guard let row = Array(results).last else {
             return nil
         }
 

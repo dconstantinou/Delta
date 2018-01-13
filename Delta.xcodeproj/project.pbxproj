@@ -12,6 +12,8 @@
 		C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CC2007EA5B008E30C1 /* GameCell.swift */; };
 		C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CE2007F4A1008E30C1 /* UIView.swift */; };
 		C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */; };
+		C94EDD75200A32CC004230B9 /* Pokemon - Fire Red Version (U) (V1.1).gba in Resources */ = {isa = PBXBuildFile; fileRef = C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */; };
+		C94EDD7A200A35DB004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba in Resources */ = {isa = PBXBuildFile; fileRef = C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */; };
 		C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFC2007CF240005EC79 /* AppDelegate.swift */; };
 		C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */; };
 		C9855E042007CF240005EC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9855E032007CF240005EC79 /* Assets.xcassets */; };
@@ -83,6 +85,7 @@
 		C94160CC2007EA5B008E30C1 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		C94160CE2007F4A1008E30C1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C94160D32007F9E4008E30C1 /* Delta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delta.xcdatamodel; sourceTree = "<group>"; };
+		C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario Advance 2 - Super Mario World (U) [!].gba"; sourceTree = "<group>"; };
 		C957492C200937D000E2328A /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
 		C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Fire Red Version (U) (V1.1).gba"; sourceTree = "<group>"; };
 		C9855DF92007CF240005EC79 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +158,7 @@
 		C957492F2009382700E2328A /* ROMS */ = {
 			isa = PBXGroup;
 			children = (
+				C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */,
 				C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */,
 			);
 			path = ROMS;
@@ -324,6 +328,8 @@
 				C9855E072007CF240005EC79 /* LaunchScreen.storyboard in Resources */,
 				C9855E042007CF240005EC79 /* Assets.xcassets in Resources */,
 				C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */,
+				C94EDD75200A32CC004230B9 /* Pokemon - Fire Red Version (U) (V1.1).gba in Resources */,
+				C94EDD7A200A35DB004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,25 +376,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCryptoModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
