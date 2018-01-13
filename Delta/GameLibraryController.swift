@@ -94,4 +94,8 @@ struct GameLibraryController {
         }
     }
     
+    // MARK: - Stored Properties
+    
+    private let viewContext = DataController.main.viewContext
+    
 }

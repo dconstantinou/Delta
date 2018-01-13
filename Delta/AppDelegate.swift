@@ -48,6 +48,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Stored Properties
     
     var window: UIWindow?
-    private let viewContext = DataController.main.viewContext
 
 }
