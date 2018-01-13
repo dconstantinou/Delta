@@ -66,6 +66,7 @@ class GameCollectionViewController: UIViewController {
     private func load(url: URL, type: GameType) {
         let controller = GameViewController()
         controller.game = DeltaCore.Game(fileURL: url, type: type)
+        controller.delegate = self
         present(controller, animated: false, completion: nil)
     }
 
@@ -94,4 +95,13 @@ class GameCollectionViewController: UIViewController {
     
     let games: Observable<[Game]>
 
+}
+
+extension GameCollectionViewController: GameViewControllerDelegate {
+    
+    func gameViewController(_ gameViewController: GameViewController, handleMenuInputFrom gameController: GameController) {
+        gameViewController.pauseEmulation()
+        gameViewController.dismiss(animated: true, completion: nil)
+    }
+    
 }
