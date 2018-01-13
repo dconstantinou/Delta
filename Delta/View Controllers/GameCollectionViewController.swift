@@ -12,6 +12,7 @@ import CoreData
 import RxSwift
 import RxCocoa
 import RxCoreData
+import Kingfisher
 
 class GameCollectionViewController: UIViewController {
 
@@ -34,11 +35,17 @@ class GameCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = NSLocalizedString("Games", comment: "Games")
+
         view.addSubview(collectionView)
         collectionView.pinToSuperviewEdges()
 
         games.bind(to: collectionView.rx.items(cellIdentifier: String(describing: GameCell.self), cellType: GameCell.self)) { _, game, cell in
             cell.titleLabel.text = game.name
+            
+            if let artwork = game.artwork?.url {
+                cell.imageView.kf.setImage(with: artwork)
+            }
         }.disposed(by: bag)
     }
     

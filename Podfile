@@ -8,4 +8,5 @@ target 'Delta' do
   pod 'RxCoreData', '~> 0.4'
   pod 'SQLite.swift', '~> 0.11.4'
   pod 'CommonCryptoModule', '~> 1.0.2'
+  pod 'Kingfisher', '~> 4.3.1'
 end

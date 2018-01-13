@@ -16,6 +16,7 @@
 		C94EDD7A200A35DB004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba in Resources */ = {isa = PBXBuildFile; fileRef = C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */; };
 		C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7B200A3DF1004230B9 /* DataController.swift */; };
 		C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */; };
+		C97018E8200A4CA100B9C5A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97018E7200A4CA100B9C5A8 /* Artwork.swift */; };
 		C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFC2007CF240005EC79 /* AppDelegate.swift */; };
 		C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */; };
 		C9855E042007CF240005EC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9855E032007CF240005EC79 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryController.swift; sourceTree = "<group>"; };
 		C957492C200937D000E2328A /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
 		C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Fire Red Version (U) (V1.1).gba"; sourceTree = "<group>"; };
+		C97018E7200A4CA100B9C5A8 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		C9855DF92007CF240005EC79 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9855DFC2007CF240005EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
@@ -126,12 +128,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C905CE402009399B008F9798 /* Controllers */ = {
+		C905CE402009399B008F9798 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */,
 			);
-			path = Controllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		C94160D02007F5A3008E30C1 /* Extensions */ = {
@@ -150,6 +152,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C94EDD7F200A463E004230B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */,
+				C94EDD7B200A3DF1004230B9 /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C957492D200937D300E2328A /* OpenVGDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +177,14 @@
 				C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */,
 			);
 			path = ROMS;
+			sourceTree = "<group>";
+		};
+		C97018E9200A4CA600B9C5A8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C97018E7200A4CA100B9C5A8 /* Artwork.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		C9855DF02007CF240005EC79 = {
@@ -193,12 +212,12 @@
 			children = (
 				C9855DFC2007CF240005EC79 /* AppDelegate.swift */,
 				C94160D12007F5D9008E30C1 /* Views */,
-				C905CE402009399B008F9798 /* Controllers */,
+				C905CE402009399B008F9798 /* View Controllers */,
+				C94EDD7F200A463E004230B9 /* Controllers */,
+				C97018E9200A4CA600B9C5A8 /* Entities */,
 				C94160D02007F5A3008E30C1 /* Extensions */,
 				C957492D200937D300E2328A /* OpenVGDB */,
 				C957492F2009382700E2328A /* ROMS */,
-				C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */,
-				C94EDD7B200A3DF1004230B9 /* DataController.swift */,
 				C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */,
 				C9855E032007CF240005EC79 /* Assets.xcassets */,
 				C9855E052007CF240005EC79 /* LaunchScreen.storyboard */,
@@ -383,6 +402,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -391,6 +411,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCryptoModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -408,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97018E8200A4CA100B9C5A8 /* Artwork.swift in Sources */,
 				C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */,
 				C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */,
 				C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */,

@@ -21,12 +21,13 @@ struct GameLibraryController {
             return
         }
 
-        try importGame(for: release)
+        try importGame(for: url, info: release)
+        try viewContext.save()
     }
     
     // MARK: - Private Methods
  
-    private func importGame(for info: OpenVGDB.Release) throws {
+    private func importGame(for url: URL, info: OpenVGDB.Release) throws {
         let request: NSFetchRequest<Game> = Game.fetchRequest()
         request.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.rom.md5), info.rom.md5)
         request.fetchLimit = 1
@@ -39,18 +40,20 @@ struct GameLibraryController {
         let game = Game(context: viewContext)
         game.name = info.name
         game.summary = info.summary
-        game.rom = try rom(for: info.rom)
+        game.rom = try rom(for: url, info: info.rom)
+        game.artwork = try artwork(for: info)
         game.system = try system(for: info.system)
     }
     
-    private func rom(for info: OpenVGDB.ROM) throws -> ROM {
+    private func rom(for url: URL, info: OpenVGDB.ROM) throws -> ROM {
         let rom = ROM(context: viewContext)
         rom.md5 = info.md5
-        
+        rom.path = url.path
+
         return rom
     }
     
-    private func createArtwork(for info: OpenVGDB.Release) throws -> Artwork? {
+    private func artwork(for info: OpenVGDB.Release) throws -> Artwork? {
         guard let source = info.artwork else {
             return nil
         }
