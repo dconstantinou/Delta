@@ -14,6 +14,8 @@
 		C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */; };
 		C94EDD75200A32CC004230B9 /* Pokemon - Fire Red Version (U) (V1.1).gba in Resources */ = {isa = PBXBuildFile; fileRef = C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */; };
 		C94EDD7A200A35DB004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba in Resources */ = {isa = PBXBuildFile; fileRef = C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */; };
+		C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7B200A3DF1004230B9 /* DataController.swift */; };
+		C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */; };
 		C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFC2007CF240005EC79 /* AppDelegate.swift */; };
 		C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */; };
 		C9855E042007CF240005EC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9855E032007CF240005EC79 /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		C94160CE2007F4A1008E30C1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C94160D32007F9E4008E30C1 /* Delta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delta.xcdatamodel; sourceTree = "<group>"; };
 		C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario Advance 2 - Super Mario World (U) [!].gba"; sourceTree = "<group>"; };
+		C94EDD7B200A3DF1004230B9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryController.swift; sourceTree = "<group>"; };
 		C957492C200937D000E2328A /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
 		C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Fire Red Version (U) (V1.1).gba"; sourceTree = "<group>"; };
 		C9855DF92007CF240005EC79 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +197,8 @@
 				C94160D02007F5A3008E30C1 /* Extensions */,
 				C957492D200937D300E2328A /* OpenVGDB */,
 				C957492F2009382700E2328A /* ROMS */,
+				C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */,
+				C94EDD7B200A3DF1004230B9 /* DataController.swift */,
 				C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */,
 				C9855E032007CF240005EC79 /* Assets.xcassets */,
 				C9855E052007CF240005EC79 /* LaunchScreen.storyboard */,
@@ -402,8 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */,
 				C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */,
 				C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */,
+				C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */,
 				C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */,
 				C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,

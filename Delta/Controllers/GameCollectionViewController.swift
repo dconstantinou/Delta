@@ -18,17 +18,9 @@ class GameCollectionViewController: UIViewController {
     // MARK: - Init
 
     init() {
-        container = NSPersistentContainer(name: "Delta")
-        container.loadPersistentStores(completionHandler: { (_, error) in
-            if let error = error {
-                fatalError("Error loading stores: \(error)")
-            }
-        })
-
-        let fetchRequest: NSFetchRequest<Game> = Game.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(Game.name), ascending: false)]
-
-        games = container.viewContext.rx.entities(fetchRequest: fetchRequest)
+        let request: NSFetchRequest<Game> = Game.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Game.name), ascending: false)]
+        games = viewContext.rx.entities(fetchRequest: request)
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -78,9 +70,9 @@ class GameCollectionViewController: UIViewController {
 
     // MARK: - Stored Properties
 
+    private let viewContext = DataController.main.viewContext
     private let bag = DisposeBag()
     
-    let container: NSPersistentContainer
     let games: Observable<[Game]>
 
 }
