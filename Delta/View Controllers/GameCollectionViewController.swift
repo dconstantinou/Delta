@@ -39,6 +39,10 @@ class GameCollectionViewController: UIViewController {
 
         view.addSubview(collectionView)
         collectionView.pinToSuperviewEdges()
+        
+        collectionView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+            self?.itemSelected(indexPath: indexPath)
+        }).disposed(by: bag)
 
         games.bind(to: collectionView.rx.items(cellIdentifier: String(describing: GameCell.self), cellType: GameCell.self)) { _, game, cell in
             cell.titleLabel.text = game.name
@@ -51,10 +55,18 @@ class GameCollectionViewController: UIViewController {
     
     // MARK: - Private Methods
     
+    private func itemSelected(indexPath: IndexPath) {
+        guard
+            let game: Game = try? collectionView.rx.model(at: indexPath),
+            let path = game.rom?.path else { return }
+
+        load(url: URL(fileURLWithPath: path), type: .gba)
+    }
+    
     private func load(url: URL, type: GameType) {
         let controller = GameViewController()
         controller.game = DeltaCore.Game(fileURL: url, type: type)
-        present(controller, animated: true, completion: nil)
+        present(controller, animated: false, completion: nil)
     }
 
     // MARK: - Stored Properties

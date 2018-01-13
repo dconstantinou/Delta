@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905CE4420093A4A008F9798 /* OpenVGDB.swift */; };
 		C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C957492C200937D000E2328A /* openvgdb.sqlite */; };
+		C90FD6FF200A530E00ABC3FE /* ZipZap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C90FD6FD200A528000ABC3FE /* ZipZap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CC2007EA5B008E30C1 /* GameCell.swift */; };
 		C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CE2007F4A1008E30C1 /* UIView.swift */; };
 		C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */; };
@@ -73,6 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C90FD6FF200A530E00ABC3FE /* ZipZap.framework in Embed Frameworks */,
 				C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */,
 				C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */,
 			);
@@ -85,6 +87,7 @@
 		29789E57FAA7D69FBE0AA936 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
 		6C3110E27BD7F7F8C505C99D /* Pods-Delta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.debug.xcconfig"; sourceTree = "<group>"; };
 		C905CE4420093A4A008F9798 /* OpenVGDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVGDB.swift; sourceTree = "<group>"; };
+		C90FD6FD200A528000ABC3FE /* ZipZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZipZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94160CC2007EA5B008E30C1 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		C94160CE2007F4A1008E30C1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C94160D32007F9E4008E30C1 /* Delta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delta.xcdatamodel; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 		EB9F0E811FBA81A1135EADBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C90FD6FD200A528000ABC3FE /* ZipZap.framework */,
 				F1EE83BE917A0B1A11A09481 /* Pods_Delta.framework */,
 			);
 			name = Frameworks;
