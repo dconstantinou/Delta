@@ -27,6 +27,7 @@
 		C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E172007D1840005EC79 /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; };
 		C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9D98D6B200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		C9855E082007CF240005EC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9855E112007D1840005EC79 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = External/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBADeltaCore.xcodeproj; path = External/GBADeltaCore/GBADeltaCore.xcodeproj; sourceTree = "<group>"; };
+		C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFiGameControllerInputMappingViewController.swift; sourceTree = "<group>"; };
 		DD2F90043C375238C798DB92 /* Pods_Delta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */,
+				C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */,
 				C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
+				C9D98D6B200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift in Sources */,
 				C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

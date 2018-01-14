@@ -46,9 +46,14 @@ struct GameLibraryController {
     }
     
     private func rom(for url: URL, info: OpenVGDB.ROM) throws -> ROM {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let romURL = documentsURL!.appendingPathComponent(url.lastPathComponent)
+        
+        try! FileManager.default.copyItem(at: url, to: romURL)
+
         let rom = ROM(context: viewContext)
         rom.md5 = info.md5
-        rom.path = url.path
+        rom.path = romURL.path
 
         return rom
     }

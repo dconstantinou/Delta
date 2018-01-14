@@ -52,7 +52,7 @@ class GameCollectionViewController: UIViewController {
             }
         }.disposed(by: bag)
     }
-    
+
     // MARK: - Private Methods
     
     private func itemSelected(indexPath: IndexPath) {
@@ -67,7 +67,7 @@ class GameCollectionViewController: UIViewController {
         let controller = GameViewController()
         controller.game = DeltaCore.Game(fileURL: url, type: type)
         controller.delegate = self
-        present(controller, animated: false, completion: nil)
+        present(controller, animated: true, completion: nil)
     }
 
     // MARK: - Stored Properties
