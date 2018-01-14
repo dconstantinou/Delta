@@ -18,6 +18,7 @@ struct GameLibraryController {
         
         let db = try OpenVGDB()
         guard let release = try db.release(forMD5: md5.uppercased()) else {
+            print("Error locating release for rom \(url.lastPathComponent) from hash: \(md5.uppercased())")
             return
         }
 
@@ -36,7 +37,7 @@ struct GameLibraryController {
         guard results.first == nil else {
             return
         }
-        
+
         let game = Game(context: viewContext)
         game.name = info.name
         game.summary = info.summary

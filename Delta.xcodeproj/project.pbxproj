@@ -18,9 +18,6 @@
 		C9432ED1200B829B00E0C73F /* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc in Resources */ = {isa = PBXBuildFile; fileRef = C9432ECE200B827400E0C73F /* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc */; };
 		C9432ED2200B829B00E0C73F /* Pokemon Blue.gbc in Resources */ = {isa = PBXBuildFile; fileRef = C9432ECD200B827400E0C73F /* Pokemon Blue.gbc */; };
 		C9432ED3200B829B00E0C73F /* Pokemon - Yellow Version (UE) [C][!].gbc in Resources */ = {isa = PBXBuildFile; fileRef = C9432ECB200B823400E0C73F /* Pokemon - Yellow Version (UE) [C][!].gbc */; };
-		C9432ED4200B829B00E0C73F /* Donkey Kong Country (U) (V1.2) [!].smc in Resources */ = {isa = PBXBuildFile; fileRef = C9432EC5200B81AC00E0C73F /* Donkey Kong Country (U) (V1.2) [!].smc */; };
-		C9432ED5200B829B00E0C73F /* Super Mario All-Stars (U) [!].smc in Resources */ = {isa = PBXBuildFile; fileRef = C9432EC6200B81AD00E0C73F /* Super Mario All-Stars (U) [!].smc */; };
-		C9432ED6200B829B00E0C73F /* Super Mario World (U) [!].smc in Resources */ = {isa = PBXBuildFile; fileRef = C9432EC7200B81AD00E0C73F /* Super Mario World (U) [!].smc */; };
 		C9432ED7200B829B00E0C73F /* 0032 - Castlevania - Circle of the Moon (E)(Eurasia).gba in Resources */ = {isa = PBXBuildFile; fileRef = C9432EC3200B7E0600E0C73F /* 0032 - Castlevania - Circle of the Moon (E)(Eurasia).gba */; };
 		C9432ED8200B829B00E0C73F /* Legend of Zelda, The - A Link To The Past Four Swords (U) [!].gba in Resources */ = {isa = PBXBuildFile; fileRef = C9432EBF200B7E0200E0C73F /* Legend of Zelda, The - A Link To The Past Four Swords (U) [!].gba */; };
 		C9432ED9200B829B00E0C73F /* Legend of Zelda, The - The Minish Cap (U).gba in Resources */ = {isa = PBXBuildFile; fileRef = C9432EC0200B7E0200E0C73F /* Legend of Zelda, The - The Minish Cap (U).gba */; };
@@ -34,6 +31,12 @@
 		C9432EF5200B876200E0C73F /* SNESDeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9432EE4200B874B00E0C73F /* SNESDeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9432EF9200B8B2B00E0C73F /* GameSystemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432EF8200B8B2B00E0C73F /* GameSystemPageViewController.swift */; };
 		C9432EFB200B980000E0C73F /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432EFA200B980000E0C73F /* System.swift */; };
+		C9432F0A200BA2D000E0C73F /* Super Mario World 2 - Yoshi's Island (U) (V1.1).sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F04200BA2CE00E0C73F /* Super Mario World 2 - Yoshi's Island (U) (V1.1).sfc */; };
+		C9432F0B200BA2D000E0C73F /* Legend of Zelda, The - A Link to the Past (U) [!].sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F05200BA2CF00E0C73F /* Legend of Zelda, The - A Link to the Past (U) [!].sfc */; };
+		C9432F0C200BA2D000E0C73F /* Street Fighter II - The World Warrior (U) [!].sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F06200BA2CF00E0C73F /* Street Fighter II - The World Warrior (U) [!].sfc */; };
+		C9432F0D200BA2D000E0C73F /* Aladdin (U) [!].sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F07200BA2CF00E0C73F /* Aladdin (U) [!].sfc */; };
+		C9432F0E200BA2D000E0C73F /* Mortal Kombat (U).sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F08200BA2D000E0C73F /* Mortal Kombat (U).sfc */; };
+		C9432F0F200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F09200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc */; };
 		C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7B200A3DF1004230B9 /* DataController.swift */; };
 		C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */; };
 		C97018E8200A4CA100B9C5A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97018E7200A4CA100B9C5A8 /* Artwork.swift */; };
@@ -160,9 +163,6 @@
 		C9432EBF200B7E0200E0C73F /* Legend of Zelda, The - A Link To The Past Four Swords (U) [!].gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Legend of Zelda, The - A Link To The Past Four Swords (U) [!].gba"; sourceTree = "<group>"; };
 		C9432EC0200B7E0200E0C73F /* Legend of Zelda, The - The Minish Cap (U).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Legend of Zelda, The - The Minish Cap (U).gba"; sourceTree = "<group>"; };
 		C9432EC3200B7E0600E0C73F /* 0032 - Castlevania - Circle of the Moon (E)(Eurasia).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "0032 - Castlevania - Circle of the Moon (E)(Eurasia).gba"; sourceTree = "<group>"; };
-		C9432EC5200B81AC00E0C73F /* Donkey Kong Country (U) (V1.2) [!].smc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Donkey Kong Country (U) (V1.2) [!].smc"; sourceTree = "<group>"; };
-		C9432EC6200B81AD00E0C73F /* Super Mario All-Stars (U) [!].smc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario All-Stars (U) [!].smc"; sourceTree = "<group>"; };
-		C9432EC7200B81AD00E0C73F /* Super Mario World (U) [!].smc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario World (U) [!].smc"; sourceTree = "<group>"; };
 		C9432ECB200B823400E0C73F /* Pokemon - Yellow Version (UE) [C][!].gbc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Yellow Version (UE) [C][!].gbc"; sourceTree = "<group>"; };
 		C9432ECD200B827400E0C73F /* Pokemon Blue.gbc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Blue.gbc"; sourceTree = "<group>"; };
 		C9432ECE200B827400E0C73F /* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc"; sourceTree = "<group>"; };
@@ -170,6 +170,12 @@
 		C9432EE7200B875200E0C73F /* GBCDeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBCDeltaCore.xcodeproj; path = External/GBCDeltaCore/GBCDeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9432EF8200B8B2B00E0C73F /* GameSystemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystemPageViewController.swift; sourceTree = "<group>"; };
 		C9432EFA200B980000E0C73F /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		C9432F04200BA2CE00E0C73F /* Super Mario World 2 - Yoshi's Island (U) (V1.1).sfc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario World 2 - Yoshi's Island (U) (V1.1).sfc"; sourceTree = "<group>"; };
+		C9432F05200BA2CF00E0C73F /* Legend of Zelda, The - A Link to the Past (U) [!].sfc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Legend of Zelda, The - A Link to the Past (U) [!].sfc"; sourceTree = "<group>"; };
+		C9432F06200BA2CF00E0C73F /* Street Fighter II - The World Warrior (U) [!].sfc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Street Fighter II - The World Warrior (U) [!].sfc"; sourceTree = "<group>"; };
+		C9432F07200BA2CF00E0C73F /* Aladdin (U) [!].sfc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aladdin (U) [!].sfc"; sourceTree = "<group>"; };
+		C9432F08200BA2D000E0C73F /* Mortal Kombat (U).sfc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mortal Kombat (U).sfc"; sourceTree = "<group>"; };
+		C9432F09200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario All-Stars (U) [!].sfc"; sourceTree = "<group>"; };
 		C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario Advance 2 - Super Mario World (U) [!].gba"; sourceTree = "<group>"; };
 		C94EDD7B200A3DF1004230B9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryController.swift; sourceTree = "<group>"; };
@@ -278,12 +284,15 @@
 		C957492F2009382700E2328A /* ROMS */ = {
 			isa = PBXGroup;
 			children = (
+				C9432F07200BA2CF00E0C73F /* Aladdin (U) [!].sfc */,
+				C9432F05200BA2CF00E0C73F /* Legend of Zelda, The - A Link to the Past (U) [!].sfc */,
+				C9432F08200BA2D000E0C73F /* Mortal Kombat (U).sfc */,
+				C9432F06200BA2CF00E0C73F /* Street Fighter II - The World Warrior (U) [!].sfc */,
+				C9432F09200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc */,
+				C9432F04200BA2CE00E0C73F /* Super Mario World 2 - Yoshi's Island (U) (V1.1).sfc */,
 				C9432ECE200B827400E0C73F /* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc */,
 				C9432ECD200B827400E0C73F /* Pokemon Blue.gbc */,
 				C9432ECB200B823400E0C73F /* Pokemon - Yellow Version (UE) [C][!].gbc */,
-				C9432EC5200B81AC00E0C73F /* Donkey Kong Country (U) (V1.2) [!].smc */,
-				C9432EC6200B81AD00E0C73F /* Super Mario All-Stars (U) [!].smc */,
-				C9432EC7200B81AD00E0C73F /* Super Mario World (U) [!].smc */,
 				C9432EC3200B7E0600E0C73F /* 0032 - Castlevania - Circle of the Moon (E)(Eurasia).gba */,
 				C9432EBF200B7E0200E0C73F /* Legend of Zelda, The - A Link To The Past Four Swords (U) [!].gba */,
 				C9432EC0200B7E0200E0C73F /* Legend of Zelda, The - The Minish Cap (U).gba */,
@@ -512,15 +521,18 @@
 				C9432EDB200B829B00E0C73F /* Pokemon - Ruby Version (U) (V1.1).gba in Resources */,
 				C9855E072007CF240005EC79 /* LaunchScreen.storyboard in Resources */,
 				C9432EDA200B829B00E0C73F /* Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba in Resources */,
-				C9432ED6200B829B00E0C73F /* Super Mario World (U) [!].smc in Resources */,
 				C9432ED8200B829B00E0C73F /* Legend of Zelda, The - A Link To The Past Four Swords (U) [!].gba in Resources */,
-				C9432ED5200B829B00E0C73F /* Super Mario All-Stars (U) [!].smc in Resources */,
-				C9432ED4200B829B00E0C73F /* Donkey Kong Country (U) (V1.2) [!].smc in Resources */,
+				C9432F0F200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc in Resources */,
+				C9432F0C200BA2D000E0C73F /* Street Fighter II - The World Warrior (U) [!].sfc in Resources */,
 				C9855E042007CF240005EC79 /* Assets.xcassets in Resources */,
 				C9432ED1200B829B00E0C73F /* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc in Resources */,
 				C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */,
+				C9432F0B200BA2D000E0C73F /* Legend of Zelda, The - A Link to the Past (U) [!].sfc in Resources */,
+				C9432F0D200BA2D000E0C73F /* Aladdin (U) [!].sfc in Resources */,
+				C9432F0A200BA2D000E0C73F /* Super Mario World 2 - Yoshi's Island (U) (V1.1).sfc in Resources */,
 				C9432ED2200B829B00E0C73F /* Pokemon Blue.gbc in Resources */,
 				C9432EDD200B829B00E0C73F /* Pokemon - Fire Red Version (U) (V1.1).gba in Resources */,
+				C9432F0E200BA2D000E0C73F /* Mortal Kombat (U).sfc in Resources */,
 				C9432ED7200B829B00E0C73F /* 0032 - Castlevania - Circle of the Moon (E)(Eurasia).gba in Resources */,
 				C9432ED9200B829B00E0C73F /* Legend of Zelda, The - The Minish Cap (U).gba in Resources */,
 				C9432ED3200B829B00E0C73F /* Pokemon - Yellow Version (UE) [C][!].gbc in Resources */,

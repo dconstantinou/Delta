@@ -101,6 +101,7 @@ final class GameCollectionViewController: UIViewController {
         present(viewController, animated: true) {
             if let controller = ExternalGameControllerManager.shared.connectedControllers.first as? MFiGameController, let emulator = viewController.emulatorCore {
                 controller.addReceiver(emulator)
+                controller.addReceiver(viewController)
                 viewController.controllerView.isHidden = true
             }
         }

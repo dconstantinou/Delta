@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let GBA = Bundle.main.urls(forResourcesWithExtension: "gba", subdirectory: nil) ?? []
         let GBC = Bundle.main.urls(forResourcesWithExtension: "gbc", subdirectory: nil) ?? []
-        let SNES = Bundle.main.urls(forResourcesWithExtension: "smc", subdirectory: nil) ?? []
+        let SNES = Bundle.main.urls(forResourcesWithExtension: "sfc", subdirectory: nil) ?? []
         let ROMS = GBA + GBC + SNES
 
         try ROMS.forEach(library.importFile)
