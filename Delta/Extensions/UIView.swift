@@ -23,4 +23,15 @@ extension UIView {
         ])
     }
     
+    func pinToSuperviewSafeAreaLayoutGuide() {
+        let margins = safeAreaLayoutGuide
+
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: margins.topAnchor),
+            leftAnchor.constraint(equalTo: margins.leftAnchor),
+            bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            rightAnchor.constraint(equalTo: margins.rightAnchor)
+        ])
+    }
+    
 }

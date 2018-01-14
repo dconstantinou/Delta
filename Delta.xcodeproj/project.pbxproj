@@ -32,6 +32,8 @@
 		C9432EF1200B875D00E0C73F /* GBCDeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9432EED200B875200E0C73F /* GBCDeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9432EF4200B876200E0C73F /* SNESDeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9432EE4200B874B00E0C73F /* SNESDeltaCore.framework */; };
 		C9432EF5200B876200E0C73F /* SNESDeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9432EE4200B874B00E0C73F /* SNESDeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9432EF9200B8B2B00E0C73F /* GameSystemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432EF8200B8B2B00E0C73F /* GameSystemPageViewController.swift */; };
+		C9432EFB200B980000E0C73F /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432EFA200B980000E0C73F /* System.swift */; };
 		C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7B200A3DF1004230B9 /* DataController.swift */; };
 		C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */; };
 		C97018E8200A4CA100B9C5A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97018E7200A4CA100B9C5A8 /* Artwork.swift */; };
@@ -166,6 +168,8 @@
 		C9432ECE200B827400E0C73F /* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc"; sourceTree = "<group>"; };
 		C9432EDE200B874B00E0C73F /* SNESDeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SNESDeltaCore.xcodeproj; path = External/SNESDeltaCore/SNESDeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9432EE7200B875200E0C73F /* GBCDeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBCDeltaCore.xcodeproj; path = External/GBCDeltaCore/GBCDeltaCore.xcodeproj; sourceTree = "<group>"; };
+		C9432EF8200B8B2B00E0C73F /* GameSystemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystemPageViewController.swift; sourceTree = "<group>"; };
+		C9432EFA200B980000E0C73F /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario Advance 2 - Super Mario World (U) [!].gba"; sourceTree = "<group>"; };
 		C94EDD7B200A3DF1004230B9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 		C905CE402009399B008F9798 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9432EF8200B8B2B00E0C73F /* GameSystemPageViewController.swift */,
 				C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */,
 				C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */,
 			);
@@ -295,6 +300,7 @@
 			children = (
 				C97018E7200A4CA100B9C5A8 /* Artwork.swift */,
 				C9432EBB200B6F2700E0C73F /* ROM.swift */,
+				C9432EFA200B980000E0C73F /* System.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -595,12 +601,14 @@
 			files = (
 				C97018E8200A4CA100B9C5A8 /* Artwork.swift in Sources */,
 				C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */,
+				C9432EFB200B980000E0C73F /* System.swift in Sources */,
 				C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */,
 				C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */,
 				C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */,
 				C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */,
 				C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
+				C9432EF9200B8B2B00E0C73F /* GameSystemPageViewController.swift in Sources */,
 				C9D98D6B200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift in Sources */,
 				C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */,
 				C9432EBC200B6F2700E0C73F /* ROM.swift in Sources */,

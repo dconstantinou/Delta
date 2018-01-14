@@ -13,21 +13,28 @@ import RxSwift
 import RxCocoa
 import RxCoreData
 import Kingfisher
-import GBADeltaCore
 
-class GameCollectionViewController: UIViewController {
+final class GameCollectionViewController: UIViewController {
 
     // MARK: - Init
 
-    init(system: String, type: GameType) {
+    init(systemID: String, core: DeltaCoreProtocol) throws {
+        guard let system = try System.system(for: systemID, context: viewContext) else {
+            fatalError("Unable to load system with identifier: \(systemID)")
+        }
+
         let request: NSFetchRequest<Game> = Game.fetchRequest()
-        request.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.system.identifier), system)
+        request.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.system), system)
         request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Game.name), ascending: true)]
         
         self.games = viewContext.rx.entities(fetchRequest: request)
-        self.type = type
+        self.core = core
+
+        Delta.register(core)
 
         super.init(nibName: nil, bundle: nil)
+        
+        title = system.shortName
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -38,9 +45,7 @@ class GameCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = NSLocalizedString("Games", comment: "Games")
-
+        
         view.addSubview(collectionView)
         collectionView.pinToSuperviewEdges()
         
@@ -90,7 +95,7 @@ class GameCollectionViewController: UIViewController {
     
     private func load(url: URL) {
         let viewController = GameViewController()
-        viewController.game = DeltaCore.Game(fileURL: url, type: type)
+        viewController.game = DeltaCore.Game(fileURL: url, type: core.gameType)
         viewController.delegate = self
 
         present(viewController, animated: true) {
@@ -127,7 +132,7 @@ class GameCollectionViewController: UIViewController {
     private let bag = DisposeBag()
     
     let games: Observable<[Game]>
-    let type: GameType
+    let core: DeltaCoreProtocol
 
 }
 

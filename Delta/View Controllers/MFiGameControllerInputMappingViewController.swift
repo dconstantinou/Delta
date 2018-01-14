@@ -9,7 +9,7 @@
 import UIKit
 import DeltaCore
 
-class MFiGameControllerInputMappingViewController: UIViewController, GameControllerReceiver {
+final class MFiGameControllerInputMappingViewController: UIViewController, GameControllerReceiver {
 
     // MARK: - Init
 

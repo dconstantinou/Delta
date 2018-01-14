@@ -33,7 +33,7 @@ final class GameCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [self.imageView, self.titleLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 5.0
+        stackView.spacing = 10.0
         stackView.isLayoutMarginsRelativeArrangement = true
         
         return stackView

@@ -22,22 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-
-        let navigationController = UINavigationController()
-        navigationController.viewControllers = [
-//            GameCollectionViewController(system: "openemu.system.snes", type: GameType.snes),
-//            GameCollectionViewController(system: "openemu.system.gba", type: GameType.gba),
-            GameCollectionViewController(system: "openemu.system.gb", type: GameType.gbc)
-        ]
-        
-        navigationController.navigationBar.barStyle = .black
-        window?.rootViewController = navigationController
-
         ExternalGameControllerManager.shared.startMonitoring()
 
-        registerCores()
+        configureWindow()
         try! importGames()
 
         return true
@@ -45,10 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Private Methods
  
-    private func registerCores() {
-        Delta.register(GBA.core)
-        Delta.register(GBC.core)
-        Delta.register(SNES.core)
+    private func configureWindow() {
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [GameSystemPageViewController()]
+        navigationController.navigationBar.barStyle = .black
+        
+        window = UIWindow()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
     
     private func importGames() throws {
@@ -67,4 +58,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 }
-
