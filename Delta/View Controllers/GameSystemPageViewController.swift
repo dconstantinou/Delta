@@ -52,6 +52,15 @@ final class GameSystemPageViewController: UIViewController {
         }).disposed(by: bag)
         
         configureTitle()
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(type: .settings, target: self, action: #selector(self.presentSettingsViewController))
+    }
+    
+    @objc private func presentSettingsViewController() {
+        let viewController = SettingsViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        present(navigationController, animated: true, completion: nil)
     }
 
     private func configureChildViewControllers(controllers: [UIViewController]) {
@@ -61,7 +70,7 @@ final class GameSystemPageViewController: UIViewController {
             controller.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             controller.didMove(toParentViewController: self)
         }
-        
+
         pageControl.numberOfPages = controllers.count
     }
     

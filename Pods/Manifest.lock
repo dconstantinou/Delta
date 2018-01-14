@@ -1,5 +1,6 @@
 PODS:
   - CommonCryptoModule (1.0.2)
+  - FormKit (0.2.1)
   - Kingfisher (4.3.1)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - CommonCryptoModule (~> 1.0.2)
+  - FormKit (~> 0.2)
   - Kingfisher (~> 4.3.1)
   - RxCocoa (~> 4.0)
   - RxCoreData (~> 0.4)
@@ -21,12 +23,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CommonCryptoModule: 63a68b57abed79655b3a01011419bf037a05b0a0
+  FormKit: 9c2742404c5b3fcdb0ddd743aa51f64c4e677abe
   Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxCoreData: 3717ff29afb7261f8cff4b893ffb0650367d0fe6
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
 
-PODFILE CHECKSUM: 09cc0420515ac5c1e9e8c45009faa8395dbd6cfe
+PODFILE CHECKSUM: a0a8d7566394c4eced9b678218c5ada64f1a82d4
 
 COCOAPODS: 1.3.1

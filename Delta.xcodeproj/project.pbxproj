@@ -11,6 +11,8 @@
 		C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905CE4420093A4A008F9798 /* OpenVGDB.swift */; };
 		C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C957492C200937D000E2328A /* openvgdb.sqlite */; };
 		C90FD6FF200A530E00ABC3FE /* ZipZap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C90FD6FD200A528000ABC3FE /* ZipZap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C935ED5F200BDA9500AB6678 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935ED5E200BDA9500AB6678 /* UIBarButtonItem.swift */; };
+		C935ED61200BDB0E00AB6678 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935ED60200BDB0E00AB6678 /* UIImage.swift */; };
 		C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CC2007EA5B008E30C1 /* GameCell.swift */; };
 		C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CE2007F4A1008E30C1 /* UIView.swift */; };
 		C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */; };
@@ -39,6 +41,7 @@
 		C9432F0F200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc in Resources */ = {isa = PBXBuildFile; fileRef = C9432F09200BA2D000E0C73F /* Super Mario All-Stars (U) [!].sfc */; };
 		C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7B200A3DF1004230B9 /* DataController.swift */; };
 		C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */; };
+		C96E4F73200C049A0021D3DA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E4F72200C049A0021D3DA /* SettingsViewController.swift */; };
 		C97018E8200A4CA100B9C5A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97018E7200A4CA100B9C5A8 /* Artwork.swift */; };
 		C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFC2007CF240005EC79 /* AppDelegate.swift */; };
 		C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */; };
@@ -154,6 +157,8 @@
 		B4B43F74754F9D272ED8F9D9 /* Pods-Delta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delta/Pods-Delta.release.xcconfig"; sourceTree = "<group>"; };
 		C905CE4420093A4A008F9798 /* OpenVGDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenVGDB.swift; sourceTree = "<group>"; };
 		C90FD6FD200A528000ABC3FE /* ZipZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZipZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C935ED5E200BDA9500AB6678 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		C935ED60200BDB0E00AB6678 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C94160CC2007EA5B008E30C1 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		C94160CE2007F4A1008E30C1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C94160D32007F9E4008E30C1 /* Delta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delta.xcdatamodel; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 		C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryController.swift; sourceTree = "<group>"; };
 		C957492C200937D000E2328A /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
 		C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Fire Red Version (U) (V1.1).gba"; sourceTree = "<group>"; };
+		C96E4F72200C049A0021D3DA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C97018E7200A4CA100B9C5A8 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		C9855DF92007CF240005EC79 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9855DFC2007CF240005EC79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,14 +231,25 @@
 				C9432EF8200B8B2B00E0C73F /* GameSystemPageViewController.swift */,
 				C9855DFE2007CF240005EC79 /* GameCollectionViewController.swift */,
 				C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */,
+				C96E4F72200C049A0021D3DA /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C935ED5A200BDA8900AB6678 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C935ED5E200BDA9500AB6678 /* UIBarButtonItem.swift */,
+				C935ED60200BDB0E00AB6678 /* UIImage.swift */,
+				C94160CE2007F4A1008E30C1 /* UIView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		C94160D02007F5A3008E30C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C94160CE2007F4A1008E30C1 /* UIView.swift */,
+				C935ED5A200BDA8900AB6678 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -551,6 +568,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Delta/Pods-Delta-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CommonCryptoModule/CommonCryptoModule.framework",
+				"${BUILT_PRODUCTS_DIR}/FormKit/FormKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
@@ -560,6 +578,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCryptoModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FormKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
@@ -617,9 +636,12 @@
 				C905CE4520093A4A008F9798 /* OpenVGDB.swift in Sources */,
 				C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */,
 				C94EDD7E200A43D7004230B9 /* GameLibraryController.swift in Sources */,
+				C935ED61200BDB0E00AB6678 /* UIImage.swift in Sources */,
+				C96E4F73200C049A0021D3DA /* SettingsViewController.swift in Sources */,
 				C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */,
 				C9855DFF2007CF240005EC79 /* GameCollectionViewController.swift in Sources */,
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
+				C935ED5F200BDA9500AB6678 /* UIBarButtonItem.swift in Sources */,
 				C9432EF9200B8B2B00E0C73F /* GameSystemPageViewController.swift in Sources */,
 				C9D98D6B200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift in Sources */,
 				C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */,

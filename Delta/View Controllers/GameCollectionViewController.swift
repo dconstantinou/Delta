@@ -33,7 +33,6 @@ final class GameCollectionViewController: UIViewController {
         Delta.register(core)
 
         super.init(nibName: nil, bundle: nil)
-        
         title = system.shortName
     }
 

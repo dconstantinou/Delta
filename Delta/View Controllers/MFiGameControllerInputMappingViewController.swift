@@ -54,7 +54,7 @@ final class MFiGameControllerInputMappingViewController: UIViewController, GameC
             if self.view.bounds.height > self.view.bounds.width
             {
                 // The CGRect returned by AVMakeRect is centered inside the parent frame.
-                // This is fine for landscape, but when in portrait, we want controllerView to be pinned to the bottom of the parent frame instead.
+                // This is fine for landscape, but when in  , we want controllerView to be pinned to the bottom of the parent frame instead.
                 frame.origin.y = self.view.bounds.height - frame.height
                 
                 if #available(iOS 11.0, *)
