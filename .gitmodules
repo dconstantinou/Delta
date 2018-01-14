@@ -6,3 +6,9 @@
 	path = External/GBADeltaCore
 	url = git@github.com:rileytestut/GBADeltaCore.git
 	branch = master
+[submodule "External/SNESDeltaCore"]
+	path = External/SNESDeltaCore
+	url = git@github.com:rileytestut/SNESDeltaCore.git
+[submodule "External/GBCDeltaCore"]
+	path = External/GBCDeltaCore
+	url = git@github.com:rileytestut/GBCDeltaCore.git

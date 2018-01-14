@@ -13,15 +13,19 @@ import RxSwift
 import RxCocoa
 import RxCoreData
 import Kingfisher
+import GBADeltaCore
 
 class GameCollectionViewController: UIViewController {
 
     // MARK: - Init
 
-    init() {
+    init(system: String, type: GameType) {
         let request: NSFetchRequest<Game> = Game.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Game.name), ascending: false)]
-        games = viewContext.rx.entities(fetchRequest: request)
+        request.predicate = NSPredicate(format: "%K == %@", #keyPath(Game.system.identifier), system)
+        request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Game.name), ascending: true)]
+        
+        self.games = viewContext.rx.entities(fetchRequest: request)
+        self.type = type
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -44,24 +48,36 @@ class GameCollectionViewController: UIViewController {
             self?.itemSelected(indexPath: indexPath)
         }).disposed(by: bag)
 
-        games.bind(to: collectionView.rx.items(cellIdentifier: String(describing: GameCell.self), cellType: GameCell.self)) { _, game, cell in
-            cell.titleLabel.text = game.name
-            
-            if let artwork = game.artwork?.url {
-                cell.imageView.kf.setImage(with: artwork)
-            }
+        games.bind(to: collectionView.rx.items(cellIdentifier: String(describing: GameCell.self), cellType: GameCell.self)) { [weak self] _, game, cell in
+            self?.configure(cell: cell, with: game)
         }.disposed(by: bag)
+
+        NotificationCenter.default.rx.notification(.externalGameControllerDidConnect).subscribe(onNext: { [weak self] (notification) in
+            self?.controllerWasConnected(notification: notification)
+        }).disposed(by: bag)
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         let count = CGFloat(3)
         let width = view.bounds.width - collectionViewLayout.sectionInset.left - collectionViewLayout.sectionInset.right - (collectionViewLayout.minimumInteritemSpacing * count - 1)
-
-        collectionViewLayout.itemSize = CGSize(width: width / count, height: 160.0)
+        
+        collectionViewLayout.itemSize = CGSize(width: width / count, height: 150.0)
     }
 
     // MARK: - Private Methods
+    
+    private func configure(cell: GameCell, with game: Game) {
+        cell.titleLabel.text = game.name
+
+        if let artwork = game.artwork?.url {
+            cell.imageView.kf.setImage(with: artwork)
+        }
+    }
+    
+    private func controllerWasConnected(notification: Notification) {
+        // nop
+    }
     
     private func itemSelected(indexPath: IndexPath) {
         guard
@@ -69,14 +85,20 @@ class GameCollectionViewController: UIViewController {
             let url = game.rom?.url,
             FileManager.default.fileExists(atPath: url.path) else { return }
 
-        load(url: url, type: .gba)
+        load(url: url)
     }
     
-    private func load(url: URL, type: GameType) {
-        let controller = GameViewController()
-        controller.game = DeltaCore.Game(fileURL: url, type: type)
-        controller.delegate = self
-        present(controller, animated: true, completion: nil)
+    private func load(url: URL) {
+        let viewController = GameViewController()
+        viewController.game = DeltaCore.Game(fileURL: url, type: type)
+        viewController.delegate = self
+
+        present(viewController, animated: true) {
+            if let controller = ExternalGameControllerManager.shared.connectedControllers.first as? MFiGameController, let emulator = viewController.emulatorCore {
+                controller.addReceiver(emulator)
+                viewController.controllerView.isHidden = true
+            }
+        }
     }
 
     // MARK: - Stored Properties
@@ -86,7 +108,7 @@ class GameCollectionViewController: UIViewController {
         collectionViewLayout.scrollDirection = .vertical
         collectionViewLayout.minimumInteritemSpacing = 15
         collectionViewLayout.minimumLineSpacing = 15
-        collectionViewLayout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: 20.0, left: 15.0, bottom: 20.0, right: 15.0)
 
         return collectionViewLayout
     }()
@@ -105,6 +127,7 @@ class GameCollectionViewController: UIViewController {
     private let bag = DisposeBag()
     
     let games: Observable<[Game]>
+    let type: GameType
 
 }
 
