@@ -14,6 +14,9 @@
 		C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CC2007EA5B008E30C1 /* GameCell.swift */; };
 		C94160CF2007F4A1008E30C1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94160CE2007F4A1008E30C1 /* UIView.swift */; };
 		C94160D42007F9E4008E30C1 /* Delta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C94160D22007F9E4008E30C1 /* Delta.xcdatamodeld */; };
+		C9432EBA200B6CEC00E0C73F /* Pokemon - Ruby Version (U) (V1.1).gba in Resources */ = {isa = PBXBuildFile; fileRef = C9432EB8200B6CD900E0C73F /* Pokemon - Ruby Version (U) (V1.1).gba */; };
+		C9432EBC200B6F2700E0C73F /* ROM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9432EBB200B6F2700E0C73F /* ROM.swift */; };
+		C9432EBE200B786600E0C73F /* Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba in Resources */ = {isa = PBXBuildFile; fileRef = C9432EBD200B786600E0C73F /* Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba */; };
 		C94EDD75200A32CC004230B9 /* Pokemon - Fire Red Version (U) (V1.1).gba in Resources */ = {isa = PBXBuildFile; fileRef = C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */; };
 		C94EDD7A200A35DB004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba in Resources */ = {isa = PBXBuildFile; fileRef = C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */; };
 		C94EDD7C200A3DF1004230B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94EDD7B200A3DF1004230B9 /* DataController.swift */; };
@@ -92,6 +95,9 @@
 		C94160CC2007EA5B008E30C1 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		C94160CE2007F4A1008E30C1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C94160D32007F9E4008E30C1 /* Delta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Delta.xcdatamodel; sourceTree = "<group>"; };
+		C9432EB8200B6CD900E0C73F /* Pokemon - Ruby Version (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon - Ruby Version (U) (V1.1).gba"; sourceTree = "<group>"; };
+		C9432EBB200B6F2700E0C73F /* ROM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROM.swift; sourceTree = "<group>"; };
+		C9432EBD200B786600E0C73F /* Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba"; sourceTree = "<group>"; };
 		C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario Advance 2 - Super Mario World (U) [!].gba"; sourceTree = "<group>"; };
 		C94EDD7B200A3DF1004230B9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C94EDD7D200A43D7004230B9 /* GameLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLibraryController.swift; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 		C957492F2009382700E2328A /* ROMS */ = {
 			isa = PBXGroup;
 			children = (
+				C9432EBD200B786600E0C73F /* Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba */,
+				C9432EB8200B6CD900E0C73F /* Pokemon - Ruby Version (U) (V1.1).gba */,
 				C94EDD79200A340E004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba */,
 				C957492E2009382100E2328A /* Pokemon - Fire Red Version (U) (V1.1).gba */,
 			);
@@ -189,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C97018E7200A4CA100B9C5A8 /* Artwork.swift */,
+				C9432EBB200B6F2700E0C73F /* ROM.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -357,8 +366,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9432EBE200B786600E0C73F /* Super Mario Advance 4 - Super Mario Bros. 3 (U) (V1.1).gba in Resources */,
 				C9855E072007CF240005EC79 /* LaunchScreen.storyboard in Resources */,
 				C9855E042007CF240005EC79 /* Assets.xcassets in Resources */,
+				C9432EBA200B6CEC00E0C73F /* Pokemon - Ruby Version (U) (V1.1).gba in Resources */,
 				C905CE4720093DBA008F9798 /* openvgdb.sqlite in Resources */,
 				C94EDD75200A32CC004230B9 /* Pokemon - Fire Red Version (U) (V1.1).gba in Resources */,
 				C94EDD7A200A35DB004230B9 /* Super Mario Advance 2 - Super Mario World (U) [!].gba in Resources */,
@@ -446,6 +457,7 @@
 				C9855DFD2007CF240005EC79 /* AppDelegate.swift in Sources */,
 				C9D98D6B200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift in Sources */,
 				C94160CD2007EA5B008E30C1 /* GameCell.swift in Sources */,
+				C9432EBC200B6F2700E0C73F /* ROM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

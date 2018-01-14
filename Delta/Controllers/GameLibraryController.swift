@@ -53,7 +53,7 @@ struct GameLibraryController {
 
         let rom = ROM(context: viewContext)
         rom.md5 = info.md5
-        rom.path = romURL.path
+        rom.path = url.lastPathComponent
 
         return rom
     }

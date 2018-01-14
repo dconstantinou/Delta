@@ -52,15 +52,24 @@ class GameCollectionViewController: UIViewController {
             }
         }.disposed(by: bag)
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let count = CGFloat(3)
+        let width = view.bounds.width - collectionViewLayout.sectionInset.left - collectionViewLayout.sectionInset.right - (collectionViewLayout.minimumInteritemSpacing * count - 1)
+
+        collectionViewLayout.itemSize = CGSize(width: width / count, height: 160.0)
+    }
 
     // MARK: - Private Methods
     
     private func itemSelected(indexPath: IndexPath) {
         guard
             let game: Game = try? collectionView.rx.model(at: indexPath),
-            let path = game.rom?.path else { return }
+            let url = game.rom?.url,
+            FileManager.default.fileExists(atPath: url.path) else { return }
 
-        load(url: URL(fileURLWithPath: path), type: .gba)
+        load(url: url, type: .gba)
     }
     
     private func load(url: URL, type: GameType) {
@@ -72,16 +81,18 @@ class GameCollectionViewController: UIViewController {
 
     // MARK: - Stored Properties
 
-    lazy private var collectionViewFlowLayout: UICollectionViewFlowLayout = {
+    lazy private var collectionViewLayout: UICollectionViewFlowLayout = {
         let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.itemSize = CGSize(width: 200.0, height: 200.0)
         collectionViewLayout.scrollDirection = .vertical
+        collectionViewLayout.minimumInteritemSpacing = 15
+        collectionViewLayout.minimumLineSpacing = 15
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
 
         return collectionViewLayout
     }()
     
     lazy private var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(GameCell.self, forCellWithReuseIdentifier: String(describing: GameCell.self))
         

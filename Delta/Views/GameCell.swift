@@ -16,7 +16,11 @@ final class GameCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.addSubview(stackView)
-        stackView.pinToSuperviewEdges()
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor)
+        ])
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -29,12 +33,16 @@ final class GameCell: UICollectionViewCell {
         let stackView = UIStackView(arrangedSubviews: [self.imageView, self.titleLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.spacing = 5.0
+        stackView.isLayoutMarginsRelativeArrangement = true
         
         return stackView
     }()
  
     lazy private(set) var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
 
         return imageView
     }()
@@ -42,6 +50,9 @@ final class GameCell: UICollectionViewCell {
     lazy private(set) var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.textColor = .white
+        titleLabel.font = UIFont.systemFont(ofSize: 12.0, weight: .medium)
+        titleLabel.numberOfLines = 3
+        titleLabel.textAlignment = .center
         
         return titleLabel
     }()
