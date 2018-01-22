@@ -13,6 +13,7 @@ import RxSwift
 import RxCocoa
 import RxCoreData
 import Kingfisher
+import GBADeltaCore
 
 final class GameCollectionViewController: UIViewController {
 
@@ -59,14 +60,10 @@ final class GameCollectionViewController: UIViewController {
         NotificationCenter.default.rx.notification(.externalGameControllerDidConnect).subscribe(onNext: { [weak self] (notification) in
             self?.controllerWasConnected(notification: notification)
         }).disposed(by: bag)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        let count = CGFloat(3)
-        let width = view.bounds.width - collectionViewLayout.sectionInset.left - collectionViewLayout.sectionInset.right - (collectionViewLayout.minimumInteritemSpacing * count - 1)
         
-        collectionViewLayout.itemSize = CGSize(width: width / count, height: 150.0)
+        NotificationCenter.default.rx.notification(.externalGameControllerDidDisconnect).subscribe(onNext: { [weak self] (notification) in
+            self?.controllerWasDisconnected(notification: notification)
+        }).disposed(by: bag)
     }
 
     // MARK: - Private Methods
@@ -78,9 +75,55 @@ final class GameCollectionViewController: UIViewController {
             cell.imageView.kf.setImage(with: artwork)
         }
     }
-    
+
     private func controllerWasConnected(notification: Notification) {
-        // nop
+        guard let viewController = presentedViewController as? GameViewController else {
+            return
+        }
+        
+        guard let controller = notification.object as? MFiGameController, controller.playerIndex == 0 else {
+            return
+        }
+        
+        enable(controller: controller, for: viewController)
+    }
+    
+    private func controllerWasDisconnected(notification: Notification) {
+        guard let viewController = presentedViewController as? GameViewController else {
+            return
+        }
+
+        guard let controller = notification.object as? MFiGameController else {
+            return
+        }
+
+        disable(controller: controller, for: viewController)
+    }
+    
+    private func enable(controller: MFiGameController, for viewController: GameViewController) {
+        guard let emulator = viewController.emulatorCore else {
+            return
+        }
+        
+        if var inputMapping = controller.defaultInputMapping as? GameControllerInputMapping, core == GBA.core {
+            inputMapping.set(GBAGameInput.b, forControllerInput: MFiGameController.Input.x)
+            controller.addReceiver(emulator, inputMapping: inputMapping)
+        } else {
+            controller.addReceiver(emulator)
+        }
+
+        controller.addReceiver(viewController)
+        viewController.controllerView.isHidden = true
+    }
+    
+    private func disable(controller: MFiGameController, for viewController: GameViewController) {
+        guard let emulator = viewController.emulatorCore else {
+            return
+        }
+
+        controller.removeReceiver(emulator)
+        controller.removeReceiver(viewController)
+        viewController.controllerView.isHidden = false
     }
     
     private func itemSelected(indexPath: IndexPath) {
@@ -97,13 +140,30 @@ final class GameCollectionViewController: UIViewController {
         viewController.game = DeltaCore.Game(fileURL: url, type: core.gameType)
         viewController.delegate = self
 
-        present(viewController, animated: true) {
-            if let controller = ExternalGameControllerManager.shared.connectedControllers.first as? MFiGameController, let emulator = viewController.emulatorCore {
-                controller.addReceiver(emulator)
-                controller.addReceiver(viewController)
-                viewController.controllerView.isHidden = true
+        present(viewController, animated: true) { [weak self] in
+            guard let controller = ExternalGameControllerManager.shared.connectedControllers.first as? MFiGameController else {
+                return
             }
+            
+            self?.enable(controller: controller, for: viewController)
         }
+    }
+    
+    private func showMainMenuConfirmationAlertController(from controller: GameViewController) {
+        let confirm = UIAlertAction(title: "Quit Game", style: .destructive) { _ in
+            controller.dismiss(animated: true, completion: nil)
+        }
+
+        let cancel = UIAlertAction(title: "Keep Playing", style: .default) { _ in
+            controller.resumeEmulation()
+        }
+
+        let alert = UIAlertController(title: "Quit Game?", message: "Are you sure you want to quit the game?", preferredStyle: .alert)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        
+        controller.pauseEmulation()
+        controller.present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Stored Properties
@@ -114,7 +174,8 @@ final class GameCollectionViewController: UIViewController {
         collectionViewLayout.minimumInteritemSpacing = 15
         collectionViewLayout.minimumLineSpacing = 15
         collectionViewLayout.sectionInset = UIEdgeInsets(top: 20.0, left: 15.0, bottom: 20.0, right: 15.0)
-
+        collectionViewLayout.itemSize = CGSize(width: 100.0, height: 150.0)
+        
         return collectionViewLayout
     }()
     
@@ -138,9 +199,8 @@ final class GameCollectionViewController: UIViewController {
 
 extension GameCollectionViewController: GameViewControllerDelegate {
     
-    func gameViewController(_ gameViewController: GameViewController, handleMenuInputFrom gameController: GameController) {
-        gameViewController.pauseEmulation()
-        gameViewController.dismiss(animated: true, completion: nil)
+    func gameViewController(_ controller: GameViewController, handleMenuInputFrom gameController: GameController) {
+        showMainMenuConfirmationAlertController(from: controller)
     }
     
 }

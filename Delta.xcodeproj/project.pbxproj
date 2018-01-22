@@ -51,6 +51,8 @@
 		C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E172007D1840005EC79 /* DeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; };
 		C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9855E232007D2BA0005EC79 /* GBADeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9B10246200F8170001F955F /* GenesisDeltaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B10244200F8166001F955F /* GenesisDeltaCore.framework */; };
+		C9B10247200F8170001F955F /* GenesisDeltaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B10244200F8166001F955F /* GenesisDeltaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9D98D6B200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,20 @@
 			remoteGlobalIDString = BFE8E9C91D010AF7009D623D;
 			remoteInfo = GBADeltaCore;
 		};
+		C9B10243200F8166001F955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B1023D200F8166001F955F /* GenesisDeltaCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9B10232200F810F001F955F;
+			remoteInfo = GenesisDeltaCore;
+		};
+		C9B10248200F8170001F955F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B1023D200F8166001F955F /* GenesisDeltaCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B10231200F810F001F955F;
+			remoteInfo = GenesisDeltaCore;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -142,6 +158,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C90FD6FF200A530E00ABC3FE /* ZipZap.framework in Embed Frameworks */,
+				C9B10247200F8170001F955F /* GenesisDeltaCore.framework in Embed Frameworks */,
 				C9432EF1200B875D00E0C73F /* GBCDeltaCore.framework in Embed Frameworks */,
 				C9855E192007D1A70005EC79 /* DeltaCore.framework in Embed Frameworks */,
 				C9855E272007D2C70005EC79 /* GBADeltaCore.framework in Embed Frameworks */,
@@ -196,6 +213,7 @@
 		C9855E082007CF240005EC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9855E112007D1840005EC79 /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = External/DeltaCore/DeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBADeltaCore.xcodeproj; path = External/GBADeltaCore/GBADeltaCore.xcodeproj; sourceTree = "<group>"; };
+		C9B1023D200F8166001F955F /* GenesisDeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GenesisDeltaCore.xcodeproj; path = External/GenesisDeltaCore/GenesisDeltaCore.xcodeproj; sourceTree = "<group>"; };
 		C9D98D6A200B5BCF00F63321 /* MFiGameControllerInputMappingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFiGameControllerInputMappingViewController.swift; sourceTree = "<group>"; };
 		DD2F90043C375238C798DB92 /* Pods_Delta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9855E182007D1A70005EC79 /* DeltaCore.framework in Frameworks */,
+				C9B10246200F8170001F955F /* GenesisDeltaCore.framework in Frameworks */,
 				C9432EF0200B875D00E0C73F /* GBCDeltaCore.framework in Frameworks */,
 				C9855E262007D2C70005EC79 /* GBADeltaCore.framework in Frameworks */,
 				79254B3F67FEE2A9A018536F /* Pods_Delta.framework in Frameworks */,
@@ -341,6 +360,7 @@
 				C9855E1D2007D2BA0005EC79 /* GBADeltaCore.xcodeproj */,
 				C9432EDE200B874B00E0C73F /* SNESDeltaCore.xcodeproj */,
 				C9432EE7200B875200E0C73F /* GBCDeltaCore.xcodeproj */,
+				C9B1023D200F8166001F955F /* GenesisDeltaCore.xcodeproj */,
 				83247DB68EFF5DA0FE69BDBA /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -389,6 +409,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C9B1023E200F8166001F955F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9B10244200F8166001F955F /* GenesisDeltaCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EB9F0E811FBA81A1135EADBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +448,7 @@
 				C9855E1B2007D1A70005EC79 /* PBXTargetDependency */,
 				C9432EF3200B875D00E0C73F /* PBXTargetDependency */,
 				C9432EF7200B876200E0C73F /* PBXTargetDependency */,
+				C9B10249200F8170001F955F /* PBXTargetDependency */,
 			);
 			name = Delta;
 			productName = Delta;
@@ -465,6 +494,10 @@
 				{
 					ProductGroup = C9432EE8200B875200E0C73F /* Products */;
 					ProjectRef = C9432EE7200B875200E0C73F /* GBCDeltaCore.xcodeproj */;
+				},
+				{
+					ProductGroup = C9B1023E200F8166001F955F /* Products */;
+					ProjectRef = C9B1023D200F8166001F955F /* GenesisDeltaCore.xcodeproj */;
 				},
 				{
 					ProductGroup = C9432EDF200B874B00E0C73F /* Products */;
@@ -526,6 +559,13 @@
 			fileType = archive.ar;
 			path = "libVBA-M.a";
 			remoteRef = C9855E242007D2BA0005EC79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C9B10244200F8166001F955F /* GenesisDeltaCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GenesisDeltaCore.framework;
+			remoteRef = C9B10243200F8166001F955F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -671,6 +711,11 @@
 			isa = PBXTargetDependency;
 			name = GBADeltaCore;
 			targetProxy = C9855E282007D2C70005EC79 /* PBXContainerItemProxy */;
+		};
+		C9B10249200F8170001F955F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GenesisDeltaCore;
+			targetProxy = C9B10248200F8170001F955F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -55,7 +55,7 @@ final class GameSystemPageViewController: UIViewController {
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(type: .settings, target: self, action: #selector(self.presentSettingsViewController))
     }
-    
+
     @objc private func presentSettingsViewController() {
         let viewController = SettingsViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
